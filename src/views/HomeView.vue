@@ -125,14 +125,42 @@
 
 <style lang="scss">
 
-.container{
+
+
+.container {
   display: flex;
   width: auto;
   height: auto;
-  align-items: center;
+  flex-wrap: wrap; 
   justify-content: center;
+  align-items: flex-start;
   margin-top: 40px;
   margin-bottom: 40px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.col-4 {
+  flex: 0 0 33.33%; 
+  max-width: 33.33%; 
+}
+
+.card {
+  width: 100%; 
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  max-width: 100%; 
+  height: auto;
+}
+
+@media (max-width: 726px) {
+  .col-4 {
+    flex: 0 0 100%; 
+    max-width: 100%;
+  }
 }
 
 .card{
@@ -210,11 +238,11 @@ header{
  
   .container {
     flex-direction: column;
-    align-items: center; /* Optional: Centers the items horizontally */
+    align-items: center; 
   }
   .greenbox {
-    width: 100%; /* Adjust as needed */
-    // margin-left: 200px;
+    width: 100%; 
+    
     display: flex;
     flex-direction: column;
     height:auto ;
